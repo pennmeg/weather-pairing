@@ -49,3 +49,11 @@ body {
 .forecast-weather-section {
   width: 65%;
 }
+
+.noMargin {
+  margin: 0;
+}
+
+.noMarginBottom {
+  margin-bottom: 0;
+}

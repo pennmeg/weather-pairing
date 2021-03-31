@@ -8,13 +8,13 @@ const WeatherSection = ({ weather }) => {
 
   const hasWeather = weather;
 
-  useEffect(() => hasWeather && setLoading(false));
+  useEffect(() => hasWeather && setLoading(false), [weather]);
   if (loading) return <p>Loading</p>;
 
   const currentWeather = hasWeather && weather[1].current;
   const locationDetails = hasWeather && weather[1].location;
-  const forecast = hasWeather && weather[1].forecast;
-
+  const forecast = hasWeather && weather[1].historical;
+  
   return (
     <div className="weather-sections">
       <CurrentWeather
