@@ -1,10 +1,10 @@
-import { createStore } from 'redux';
-import usersReducer from '../reducers/users';
+import { createStore } from "redux";
+import weatherReducer from "../reducers/weather";
 
-const store = createStore(usersReducer);
+const store = createStore(weatherReducer);
 
 store.subscribe(() => {
-    console.log('store data:', store.getState());
+  console.log("store data:", store.getState());
 });
 
 export default store;
