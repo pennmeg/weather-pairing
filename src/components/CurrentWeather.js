@@ -1,16 +1,16 @@
 import React from "react";
 
-const CurrentWeather = ({ currentWeather, locationDetails }) => {
+const CurrentWeather = () => {
   return (
     <div className="current-weather-section">
       <div className="current-weather">
         {/* TODO: Image */}
-        <p className="temperature">{currentWeather.temperature}&deg;C</p>
-        <h2 className="noMarginBottom">{locationDetails.name}</h2>
-        <p className='noMargin'>{locationDetails.region}</p>
+        <p className="temperature">16&deg;C</p>
+        <h2 className="noMarginBottom">Washington</h2>
+        <p className='noMargin'>District of Columbia</p>
         {/* TODO: <p>Date, time</p> */}
-        <p>{currentWeather.weather_descriptions[0]}</p>
-        <p>UV Index: {currentWeather.uv_index}</p>
+        <p>Rain Shower</p>
+        <p>UV Index: 3</p>
       </div>
     </div>
   );

@@ -6,8 +6,6 @@ require("dotenv").config();
 const params = {
   access_key: process.env.WEATHER_API_KEY,
   query: "Washington DC",
-  historical_date: '2015-01-21',
-  hourly: 1,
 };
 
 const app = express();
@@ -19,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.get("/weather", (req, res) => {
   axios
-    .get("http://api.weatherstack.com/historical", { params })
+    .get("http://api.weatherstack.com/forecast", { params })
     .then((response) => {
       res.send(response.data);
     });
